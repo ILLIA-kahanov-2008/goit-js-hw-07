@@ -16,3 +16,29 @@
 // </div>
 
 // <div id="boxes"></div>
+
+const refs = {
+  numberOfBoxes: document.querySelector('input[type=number]'),
+  renderBtn: document.querySelector('[data-action="render"]'),
+  destroyBtn: document.querySelector('[data-action="destroy"]'),
+  controlsBlock: document.querySelector('#controls'),
+  boxesBlock: document.querySelector('#boxes'),
+}
+
+function createBoxes (event, amount) {
+  console.log(amount);
+  if (amount > 0) {
+    // const boxSideSize = 30;
+    // let i = 1;
+    // while (i === amount) {
+      
+    // }
+    console.log(refs.numberOfBoxes.value);
+  } else { refs.boxesBlock.textContent = 'no boxes to create' }
+}
+
+refs.numberOfBoxes.addListenerEvents('input', createBoxes(refs.numberOfBoxes.value))
+
+
+
+console.log(refs.numberOfBoxes);
