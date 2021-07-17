@@ -31,21 +31,9 @@ const galleryList = document.querySelector("ul#gallery");
 const makeGalleryCard = ({url, alt}) => {
   
   return `<li class="gallery-item"><img src=${url} alt=${alt} width="640"></li>`;
-  // const galleryItem = document.createElement('li');
-  // galleryItem.classList.add('gallery-item');
-
-  // const galleryImage = document.createElement('img');
-  // galleryImage.setAttribute('src', `${url}`);
-  // galleryImage.setAttribute('alt', `${alt}`);
-
-  // galleryItem.append(galleryImage);
-
-  // return galleryItem;
 };
 
 const makeGalleryFromImages = images.map(makeGalleryCard).join(' ');
-
-// galleryList.append(...makeGalleryFromImages);
 
 galleryList.insertAdjacentHTML('beforeend', makeGalleryFromImages);
 
